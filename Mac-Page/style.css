@@ -1,0 +1,1260 @@
+@font-face {
+  font-family: "FontsFree-Net-SFProDisplay-Regular";
+  src: url(../fonts/FontsFree-Net-SFProDisplay-Regular.ttf) format("truetype"); }
+@font-face {
+  font-family: "FontsFree-Net-SFProDisplay-BoldItalic";
+  src: url(../fonts/FontsFree-Net-SFProDisplay-BoldItalic.ttf) format("truetype"); }
+* {
+  font-family: "FontsFree-Net-SFProDisplay-Regular", sans-serif; }
+
+/*Click Section*/
+h1 {
+  font-size: 52px; }
+  @media screen and (max-width: 734px) {
+    h1 {
+      font-size: 48px; } }
+
+h2 {
+  font-size: 50px; }
+  @media screen and (max-width: 734px) {
+    h2 {
+      font-size: 34px; } }
+
+h3 {
+  font-size: 40px; }
+  @media screen and (max-width: 734px) {
+    h3 {
+      font-size: 34px; } }
+
+h4 {
+  font-size: 36px; }
+  @media screen and (max-width: 734px) {
+    h4 {
+      font-size: 32px; } }
+
+h5 {
+  font-size: 23px; }
+  @media screen and (max-width: 734px) {
+    h5 {
+      font-size: 19px; } }
+
+p,
+a,
+span,
+li {
+  font-size: 17px; }
+  @media screen and (max-width: 734px) {
+    p,
+    a,
+    span,
+    li {
+      font-size: 14px; } }
+
+p {
+  line-height: 1.5; }
+
+main #products-bar .container ul .product-from-bar:nth-child(4)::after {
+  color: #ff3b3b;
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.darker-link, .darker-link-big, .lighter-link-big {
+  color: #0066cc;
+  position: relative;
+  padding-right: 15px;
+  text-transform: capitalize; }
+  .darker-link:hover, .darker-link-big:hover, .lighter-link-big:hover {
+    text-decoration: underline; }
+
+.lighter-link {
+  text-transform: capitalize;
+  color: #2997ff;
+  position: relative;
+  padding-right: 15px; }
+  .lighter-link:hover {
+    text-decoration: underline; }
+
+.darker-link::after, .darker-link-big::after, .lighter-link-big::after,
+.lighter-link::after {
+  position: absolute;
+  right: 0;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: 1.5px solid;
+  border-right: 1.5px solid;
+  transform: rotate(45deg) translateY(100%);
+  color: inherit; }
+
+.darker-link::after, .darker-link-big::after, .lighter-link-big::after {
+  border-color: #0066cc; }
+
+.darker-link-big {
+  display: inline-block;
+  transform: scale(1.15); }
+
+.lighter-link-big {
+  display: inline-block;
+  transform: scale(1.15); }
+
+.lighter-link::after {
+  border-color: #2997ff; }
+
+.primary-btn-dark, .primary-btn-dark-small,
+.primary-btn-light-small,
+.primary-btn-light {
+  color: white;
+  border-radius: 20px;
+  font-size: 17px;
+  padding: 9px 0;
+  text-align: center;
+  border: none;
+  display: block;
+  width: 60px; }
+
+.primary-btn-light {
+  background-color: #2997ff; }
+
+.primary-btn-dark, .primary-btn-dark-small,
+.primary-btn-light-small {
+  background-color: #0066cc; }
+
+.primary-btn-dark-small,
+.primary-btn-light-small {
+  transform: scale(0.7); }
+
+.primary-btn-light-small {
+  background-color: #2997ff; }
+
+.primary-btn-dark-small {
+  background-color: #0066cc; }
+
+.click-section {
+  position: absolute;
+  inset: 0 0 0 0; }
+
+section.welcoming-darker {
+  background-color: #f5f5f7; }
+  section.welcoming-darker p {
+    max-width: 940px;
+    padding: 10px 20px;
+    margin: auto;
+    text-align: center;
+    font-size: 14px; }
+    section.welcoming-darker p a {
+      font-size: inherit;
+      padding: 0; }
+      section.welcoming-darker p a::after {
+        content: "";
+        display: none; }
+
+section.welcoming-lighter {
+  background-color: #1d1d1f; }
+  section.welcoming-lighter p {
+    max-width: 940px;
+    padding: 10px 20px;
+    margin: auto;
+    text-align: center;
+    font-size: 14px; }
+    section.welcoming-lighter p a {
+      font-size: inherit;
+      padding: 0; }
+      section.welcoming-lighter p a::after {
+        content: "";
+        display: none; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+.container {
+  max-width: 980px;
+  margin: auto; }
+
+header {
+  background-color: #444444;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+  header nav {
+    max-width: 980px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 5px 20px;
+    z-index: 3000000; }
+    header nav .logo,
+    header nav .bag {
+      color: #f5f5f7;
+      opacity: 0.8;
+      transition: 0.3s color;
+      cursor: pointer; }
+      header nav .logo:hover,
+      header nav .bag:hover {
+        opacity: 1; }
+    header nav .logo a {
+      color: inherit; }
+    header nav ul {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: nowrap; }
+      @media screen and (max-width: 767px) {
+        header nav ul {
+          position: fixed;
+          top: 38px;
+          left: 0;
+          width: 100%;
+          transform: scaleY(0);
+          transform-origin: top center;
+          background-color: #000;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0 30px;
+          overflow: hidden;
+          opacity: 0;
+          transition: 0.5s transform, 0.25s opacity;
+          z-index: 2; }
+          header nav ul li:not(:last-child) {
+            border-bottom: 1px solid #f5f5f7;
+            padding-bottom: 10px;
+            width: 100%; }
+          header nav ul li:last-child {
+            order: -1; } }
+      header nav ul li {
+        color: #f5f5f7;
+        opacity: 0.8;
+        transition: 0.3s color;
+        cursor: pointer; }
+        header nav ul li:hover {
+          opacity: 1; }
+        header nav ul li a {
+          color: inherit;
+          font-size: 14px; }
+    header nav #bars {
+      display: none; }
+      header nav #bars:checked ~ ul {
+        transform: scaleY(1);
+        padding: 20px 30px 100px;
+        overflow: visible;
+        opacity: 1; }
+    header nav label {
+      width: 20px;
+      height: 10px;
+      display: none; }
+      @media screen and (max-width: 767px) {
+        header nav label {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          gap: 0;
+          flex-wrap: nowrap;
+          order: -1; } }
+      header nav label > * {
+        width: 100%;
+        height: 2px;
+        background-color: #f5f5f7; }
+
+footer .container {
+  padding: 0 20px; }
+  footer .container a,
+  footer .container li,
+  footer .container ul,
+  footer .container p {
+    font-size: 12px; }
+  footer .container section.footer-top {
+    color: #86868b; }
+    footer .container section.footer-top article {
+      padding: 20px 0;
+      border-bottom: 1px solid #86868b; }
+    footer .container section.footer-top article > *,
+    footer .container section.footer-top ol > * {
+      margin-bottom: 10px; }
+  footer .container section.footer-links {
+    padding: 20px 0; }
+    footer .container section.footer-links h5 {
+      font-size: 12px;
+      margin-bottom: 7px; }
+    footer .container section.footer-links .wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      grid-template-rows: repeat(4, max-content); }
+      @media screen and (max-width: 767px) {
+        footer .container section.footer-links .wrapper {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(10, max-content); } }
+      footer .container section.footer-links .wrapper .Shop-and-Learn {
+        grid-column: 1 / 2;
+        grid-row: 1 / span 4; }
+        @media screen and (max-width: 767px) {
+          footer .container section.footer-links .wrapper .Shop-and-Learn {
+            grid-row: 1 /2;
+            grid-column: 1 / 2; } }
+      footer .container section.footer-links .wrapper .Services {
+        grid-column: 2 / 3;
+        grid-row: 1 / span 3; }
+        @media screen and (max-width: 767px) {
+          footer .container section.footer-links .wrapper .Services {
+            grid-row: 2/3;
+            grid-column: 1 / 2; } }
+      footer .container section.footer-links .wrapper .Account {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5; }
+        @media screen and (max-width: 767px) {
+          footer .container section.footer-links .wrapper .Account {
+            grid-row: 3/4;
+            grid-column: 1 / 2; } }
+      footer .container section.footer-links .wrapper .Apple-Store {
+        grid-column: 3 / 4;
+        grid-row: 1 / span 4; }
+        @media screen and (max-width: 767px) {
+          footer .container section.footer-links .wrapper .Apple-Store {
+            grid-row: 4/5;
+            grid-column: 1 / 2; } }
+      footer .container section.footer-links .wrapper .For-Business {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2; }
+        @media screen and (max-width: 767px) {
+          footer .container section.footer-links .wrapper .For-Business {
+            grid-row: 5/6;
+            grid-column: 1 / 2; } }
+      footer .container section.footer-links .wrapper .For-Education {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3; }
+        @media screen and (max-width: 767px) {
+          footer .container section.footer-links .wrapper .For-Education {
+            grid-row: 6/7;
+            grid-column: 1 / 2; } }
+      footer .container section.footer-links .wrapper .For-Healthcare {
+        grid-column: 4 / 5;
+        grid-row: 3 / 4; }
+        @media screen and (max-width: 767px) {
+          footer .container section.footer-links .wrapper .For-Healthcare {
+            grid-row: 7/8;
+            grid-column: 1 / 2; } }
+      footer .container section.footer-links .wrapper .For-Government {
+        grid-column: 4 / 5;
+        grid-row: 4 / 5; }
+        @media screen and (max-width: 767px) {
+          footer .container section.footer-links .wrapper .For-Government {
+            grid-row: 8/9;
+            grid-column: 1 / 2; } }
+      footer .container section.footer-links .wrapper .Apple-Values {
+        grid-column: 5 / 6;
+        grid-row: 1 / span 2; }
+        @media screen and (max-width: 767px) {
+          footer .container section.footer-links .wrapper .Apple-Values {
+            grid-row: 9/10;
+            grid-column: 1 / 2; } }
+      footer .container section.footer-links .wrapper .About-Apple {
+        grid-column: 5 / 6;
+        grid-row: 3 / span 2; }
+        @media screen and (max-width: 767px) {
+          footer .container section.footer-links .wrapper .About-Apple {
+            grid-row: 10/11;
+            grid-column: 1 / 2; } }
+      footer .container section.footer-links .wrapper ul li {
+        margin-bottom: 7px; }
+        footer .container section.footer-links .wrapper ul li a {
+          color: #86868b; }
+    footer .container section.footer-links > p {
+      margin-top: 20px; }
+      footer .container section.footer-links > p a {
+        padding: 0; }
+        footer .container section.footer-links > p a::after {
+          display: none; }
+  footer .container section.footer-bottom {
+    border-top: 1px solid #86868b;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; }
+    footer .container section.footer-bottom p:last-child {
+      flex-grow: 1;
+      text-align: end; }
+    footer .container section.footer-bottom ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0px;
+      flex-wrap: wrap; }
+      footer .container section.footer-bottom ul li {
+        padding: 2.5px 10px;
+        color: #86868b; }
+        footer .container section.footer-bottom ul li:not(:last-child) {
+          border-right: 1px solid #86868b; }
+        footer .container section.footer-bottom ul li a {
+          color: #86868b; }
+
+main {
+  margin-top: 38px; }
+  main #products-bar {
+    padding: 30px 0;
+    background-color: #f5f5f7; }
+    main #products-bar .container {
+      max-width: 1024px;
+      overflow: hidden; }
+      main #products-bar .container ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: nowrap; }
+        main #products-bar .container ul .product-from-bar {
+          text-align: center;
+          position: relative;
+          flex-basis: 100% /11;
+          padding-bottom: 15px; }
+          main #products-bar .container ul .product-from-bar:nth-child(4)::after {
+            content: "New"; }
+          main #products-bar .container ul .product-from-bar img {
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto; }
+          main #products-bar .container ul .product-from-bar span {
+            font-size: 12px;
+            position: relative; }
+  main #newiMac .content {
+    text-align: center;
+    padding: 50px 0; }
+    main #newiMac .content span {
+      display: block;
+      font-weight: bold; }
+      main #newiMac .content span:first-of-type {
+        color: #ff3b3b; }
+    main #newiMac .content p {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 10px 0; }
+    main #newiMac .content a:first-of-type {
+      margin: 15px auto; }
+  main #newiMac figure {
+    max-width: 1070px;
+    margin: 0 30px;
+    height: 466px;
+    background: url("../img/mac img/hero_imac_24__eq5phrdpwjyq_large.jpg") no-repeat;
+    background-size: 100% 100%; }
+    @media screen and (max-width: 1067px) {
+      main #newiMac figure {
+        background: url("../img/mac img/hero_imac_24__eq5phrdpwjyq_medium_2x.jpg") no-repeat;
+        background-size: 100% 100%; } }
+    @media screen and (max-width: 734px) {
+      main #newiMac figure {
+        height: 475px;
+        background: url("../img/mac img/hero_imac_24__eq5phrdpwjyq_small_2x.jpg") no-repeat;
+        background-size: 100% 475px; } }
+  main #education-pricing .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 50px 20px 20px 20px;
+    background-image: -webkit-linear-gradient(315deg, #fbd0b8 0%, #fcdcbe 48%, #fcdcbe 49%, #fceac3 100%);
+    padding: 20px 0; }
+    main #education-pricing .container figure {
+      background: url("../img/mac img/flp_mac_family__bp82711ad22u_large.png") no-repeat;
+      background-size: 100%;
+      background-position: center;
+      width: 634px;
+      height: 487px; }
+      @media screen and (max-width: 1067px) {
+        main #education-pricing .container figure {
+          background: url("../img/mac img/flp_mac_family__bp82711ad22u_medium.png") no-repeat;
+          background-size: 100%;
+          background-position: center; } }
+      @media screen and (max-width: 734px) {
+        main #education-pricing .container figure {
+          background: url("../img/mac img/flp_mac_family__bp82711ad22u_small_2x.png") no-repeat;
+          background-size: 100%;
+          background-position: center;
+          padding: 15px; } }
+    main #education-pricing .container .content {
+      width: 450px; }
+      main #education-pricing .container .content h3 {
+        max-width: 350px;
+        text-align: center;
+        margin: auto; }
+      main #education-pricing .container .content .darker-link, main #education-pricing .container .content .darker-link-big, main #education-pricing .container .content .lighter-link-big {
+        display: inline-block;
+        text-transform: none;
+        margin: 20px 120px; }
+  main #cash-back .container,
+  main #macOS .container,
+  main #moreMac .container,
+  main #One .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 50px 20px 20px 20px;
+    background-color: #f2f2f2;
+    padding: 20px; }
+    main #cash-back .container figure,
+    main #macOS .container figure,
+    main #moreMac .container figure,
+    main #One .container figure {
+      width: 792px;
+      height: 411px;
+      background: url("../img/mac img/acmi__cko5onr8ar42_large.jpg") no-repeat;
+      background-size: 100%;
+      background-position: center; }
+      @media screen and (max-width: 734px) {
+        main #cash-back .container figure,
+        main #macOS .container figure,
+        main #moreMac .container figure,
+        main #One .container figure {
+          background: url("../img/mac img/acmi__cko5onr8ar42_small_2x.jpg") no-repeat; } }
+    main #cash-back .container .content,
+    main #macOS .container .content,
+    main #moreMac .container .content,
+    main #One .container .content {
+      max-width: 460px;
+      text-align: center; }
+      main #cash-back .container .content h3,
+      main #macOS .container .content h3,
+      main #moreMac .container .content h3,
+      main #One .container .content h3 {
+        margin: auto;
+        max-width: 400px; }
+      main #cash-back .container .content p,
+      main #macOS .container .content p,
+      main #moreMac .container .content p,
+      main #One .container .content p {
+        margin: 20px 0;
+        max-width: 400px; }
+  main section#macOS .figure {
+    max-width: 618px;
+    height: 370px;
+    background: url("../img/mac img/monterey_tile__05gxr4xhdn6e_large.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center; }
+    @media screen and (max-width: 734px) {
+      main section#macOS .figure {
+        background: url("../img/mac img/monterey_tile__05gxr4xhdn6e_small.jpg") no-repeat;
+        background-position-x: center; } }
+    @media screen and (max-width: 1067px) {
+      main section#macOS .figure {
+        background: url("../img/mac img/monterey_tile__05gxr4xhdn6e_medium.jpg") no-repeat;
+        background-position-x: center; } }
+  main section#moreMac h2 {
+    text-align: center; }
+  main section#moreMac .container {
+    margin: 20px 0;
+    background-color: #fbfbfd;
+    gap: 0; }
+    main section#moreMac .container .content {
+      margin-left: 80px;
+      max-width: 400px; }
+      main section#moreMac .container .content h3 {
+        font-size: 48px; }
+      main section#moreMac .container .content p {
+        max-width: 300px;
+        text-align: center; }
+      @media screen and (max-width: 734px) {
+        main section#moreMac .container .content {
+          margin-left: 0; } }
+  main section#moreMac .figure {
+    width: 703px;
+    height: 504px;
+    background-size: 703px 504px;
+    margin-left: 100px;
+    padding: 0;
+    background: url("../img/mac img/virtual_sessions__etcx2xbk644m_large.jpg") no-repeat;
+    background-position: right; }
+    @media screen and (max-width: 1067px) {
+      main section#moreMac .figure {
+        width: 378px;
+        height: 350px;
+        background-size: 378px 350px;
+        margin-left: 0;
+        background: url("../img/mac img/virtual_sessions__etcx2xbk644m_medium.jpg") no-repeat;
+        background-position-x: center; } }
+    @media screen and (max-width: 734px) {
+      main section#moreMac .figure {
+        width: 736px;
+        height: 214px;
+        background-size: 736px 214px;
+        background: url("../img/mac img/virtual_sessions__etcx2xbk644m_small.jpg") no-repeat;
+        background-position-x: center; } }
+  main section#One .container {
+    background-color: #fbfbfd;
+    margin: 50px 0; }
+    main section#One .container .content {
+      margin-right: 80px; }
+      main section#One .container .content h2 {
+        font-weight: 600;
+        font-size: 100px; }
+        @media screen and (max-width: 734px) {
+          main section#One .container .content h2 {
+            font-size: 64px; } }
+        @media screen and (max-width: 1067px) {
+          main section#One .container .content h2 {
+            font-size: 64px; } }
+        main section#One .container .content h2 i {
+          font-size: 100px; }
+          @media screen and (max-width: 734px) {
+            main section#One .container .content h2 i {
+              font-size: 64px; } }
+          @media screen and (max-width: 1067px) {
+            main section#One .container .content h2 i {
+              font-size: 64px; } }
+      main section#One .container .content .links {
+        margin: auto; }
+        main section#One .container .content .links a {
+          margin: 0 15px; }
+      main section#One .container .content p {
+        margin-top: 20px;
+        font-size: 28px;
+        font-weight: 600; }
+        @media screen and (max-width: 734px) {
+          main section#One .container .content p {
+            font-size: 21px; } }
+        @media screen and (max-width: 1067px) {
+          main section#One .container .content p {
+            font-size: 21px;
+            max-width: 254px; } }
+      @media screen and (max-width: 734px) {
+        main section#One .container .content {
+          margin-right: 0; }
+          main section#One .container .content p {
+            font-size: 21px; } }
+  main section#One .figure {
+    width: 542px;
+    height: 329px;
+    background-size: 542px 329px;
+    margin-left: 100px;
+    padding: 0;
+    background: url("../img/mac img/bundle__b6i67yf52ieq_large.jpg") no-repeat;
+    background-position: left; }
+    @media screen and (max-width: 1067px) {
+      main section#One .figure {
+        width: 313px;
+        height: 191px;
+        background-size: 313px 191px;
+        margin-left: 0;
+        background: url("../img/mac img/bundle__b6i67yf52ieq_medium.jpg") no-repeat;
+        background-position-x: center; } }
+    @media screen and (max-width: 734px) {
+      main section#One .figure {
+        width: 297px;
+        height: 181px;
+        background-size: 297px 181px;
+        background: url("../img/mac img/bundle__b6i67yf52ieq_small.jpg") no-repeat;
+        background-position-x: center; } }
+  main section#offers .boxes {
+    width: 100%;
+    padding: 10px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 30px;
+    justify-content: center;
+    row-gap: 30px; }
+    main section#offers .boxes span {
+      font-size: 40px;
+      text-align: center;
+      display: block;
+      color: #86868b;
+      margin: 15px auto; }
+    main section#offers .boxes .box {
+      text-align: center; }
+    main section#offers .boxes h2,
+    main section#offers .boxes p {
+      font-size: 21px;
+      margin: 10px 0; }
+  main section#compare-models {
+    background-color: #fbfbfd;
+    padding: 100px 0;
+    margin: 100px 0;
+    text-align: center; }
+    main section#compare-models a {
+      margin: 15px 0 50px 0; }
+    main section#compare-models .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      column-gap: 30px;
+      justify-content: center;
+      row-gap: 30px;
+      padding: 0 10px; }
+      @media screen and (max-width: 1067px) {
+        main section#compare-models .container {
+          column-gap: 0; } }
+      main section#compare-models .container .MacBook-version {
+        text-align: center;
+        width: 290px;
+        margin: auto; }
+        main section#compare-models .container .MacBook-version .box-product figure {
+          margin: 10px auto; }
+        main section#compare-models .container .MacBook-version .box-product .device {
+          position: relative;
+          width: 276px;
+          height: 167px;
+          background: url("../img/mac img/compare_mba__gdncw5gbxoq6_large.png") no-repeat;
+          background-size: 100%; }
+        main section#compare-models .container .MacBook-version .box-product .content {
+          border-bottom: 1px solid #86868b;
+          padding: 30px 0 60px 0; }
+          main section#compare-models .container .MacBook-version .box-product .content .colors {
+            width: 70px;
+            height: 19px;
+            background: url("../img/mac img/compare_swatches_three_colors__e2hki8qb5cia_large.png") no-repeat;
+            background-size: 100%;
+            background-position: center; }
+          main section#compare-models .container .MacBook-version .box-product .content h3 {
+            font-size: 24px; }
+          main section#compare-models .container .MacBook-version .box-product .content span {
+            font-size: 14px; }
+          main section#compare-models .container .MacBook-version .box-product .content a {
+            display: block;
+            margin: auto; }
+        main section#compare-models .container .MacBook-version .specification {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding-top: 10px;
+          align-items: center;
+          height: 130px; }
+          main section#compare-models .container .MacBook-version .specification h4 {
+            font-size: 21px;
+            margin: 7px; }
+          main section#compare-models .container .MacBook-version .specification p {
+            font-size: 14px;
+            max-width: 90%;
+            text-align: center;
+            margin: 0 auto; }
+            main section#compare-models .container .MacBook-version .specification p:last-of-type {
+              color: #86868b; }
+          main section#compare-models .container .MacBook-version .specification figure {
+            width: 48px;
+            height: 44px;
+            margin: 5px auto;
+            background: url("../img/mac img/compare_icon_m1__fz8nzgohw2ai_large.png") no-repeat;
+            background-size: 100%; }
+          main section#compare-models .container .MacBook-version .specification:nth-child(4) figure {
+            background: url("../img/mac img/compare_icon_unified_memory__buw4hhhvj4uq_large.png") no-repeat; }
+          main section#compare-models .container .MacBook-version .specification:nth-child(6) figure {
+            background: url("../img/mac img/compare_icon_battery__gbh9jzw6c7u6_large.png") no-repeat; }
+          main section#compare-models .container .MacBook-version .specification:nth-child(7) figure {
+            background: url("../img/mac img/compare_icon_camera__ejp1p20yq1me_large.png") no-repeat; }
+          main section#compare-models .container .MacBook-version .specification:nth-child(9) figure {
+            background: url("../img/mac img/compare_icon_touchid__e9878ag21q6i_large.png") no-repeat; }
+        main section#compare-models .container .MacBook-version:nth-child(2) .box-product .device {
+          background: url("../img/mac img/compare_mbp13__geounnnz6oa6_large.png") no-repeat; }
+        main section#compare-models .container .MacBook-version:nth-child(2) .box-product .colors {
+          background: url("../img/mac img/compare_swatches_two_colors__02sdegyq25eq_large.png") no-repeat;
+          background-position-x: center; }
+        main section#compare-models .container .MacBook-version:nth-child(2) .specification:nth-child(9) figure {
+          background: url("../img/mac img/compare_icon_touchbar__f7w2g23m47u6_large.png") no-repeat;
+          background-position-x: center;
+          width: 100%; }
+        main section#compare-models .container .MacBook-version:nth-child(3) .box-product .device {
+          background: url("../img/mac img/compare_mbp16__fykfvftfaeuu_large.png") no-repeat; }
+        main section#compare-models .container .MacBook-version:nth-child(3) .box-product .colors {
+          background: url("../img/mac img/compare_swatches_one_color__1eild8zpc8ye_large.png") no-repeat;
+          background-position-x: center; }
+        main section#compare-models .container .MacBook-version:nth-child(3) .specification:nth-child(3) figure {
+          background: url("../img/mac img/compare_icon_intel__etladu21xu6a_large.png") no-repeat; }
+        main section#compare-models .container .MacBook-version:nth-child(3) .specification:nth-child(4) figure {
+          background: url("../img/mac img/compare_icon_memory__d1hszl4x5yy6_large.png") no-repeat; }
+        main section#compare-models .container .MacBook-version:nth-child(3) .specification:nth-child(9) figure {
+          background: url("../img/mac img/compare_icon_touchbar__f7w2g23m47u6_large.png") no-repeat;
+          background-position-x: center;
+          width: 100%; }
+  main section#accessories .wrapper,
+  main section#whatMakeMac .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px; }
+    main section#accessories .wrapper .product-sections,
+    main section#whatMakeMac .wrapper .product-sections {
+      max-width: 630px;
+      padding: 0 50px;
+      height: 600px; }
+      @media screen and (max-width: 734px) {
+        main section#accessories .wrapper .product-sections,
+        main section#whatMakeMac .wrapper .product-sections {
+          height: 470px; } }
+      main section#accessories .wrapper .product-sections .content,
+      main section#whatMakeMac .wrapper .product-sections .content {
+        text-align: center;
+        max-width: 500px;
+        margin: 30px auto; }
+        main section#accessories .wrapper .product-sections .content h2,
+        main section#whatMakeMac .wrapper .product-sections .content h2 {
+          font-size: 21px; }
+        main section#accessories .wrapper .product-sections .content h3,
+        main section#whatMakeMac .wrapper .product-sections .content h3 {
+          font-size: 48px;
+          max-width: 80%;
+          margin: 20px auto; }
+        main section#accessories .wrapper .product-sections .content p,
+        main section#whatMakeMac .wrapper .product-sections .content p {
+          max-width: 80%;
+          margin: 0px auto 20px; }
+    main section#accessories .wrapper #Explore-Mac-accessories-section,
+    main section#whatMakeMac .wrapper #Explore-Mac-accessories-section {
+      background: url("../img/mac img/accessories_tile__br8gsosiziuq_large.jpg") no-repeat, #f2f2f2;
+      background-size: 676px 336px;
+      background-position-x: center;
+      background-position-y: bottom;
+      padding-bottom: 276px; }
+      @media screen and (max-width: 1067px) {
+        main section#accessories .wrapper #Explore-Mac-accessories-section,
+        main section#whatMakeMac .wrapper #Explore-Mac-accessories-section {
+          background: url("../img/mac img/accessories_tile__br8gsosiziuq_medium_2x.jpg") no-repeat, #f2f2f2;
+          background-size: 100%;
+          background-position: bottom; } }
+      @media screen and (max-width: 734px) {
+        main section#accessories .wrapper #Explore-Mac-accessories-section,
+        main section#whatMakeMac .wrapper #Explore-Mac-accessories-section {
+          background: url("../img/mac img/accessories_tile__br8gsosiziuq_small_2x.jpg") no-repeat, #f2f2f2;
+          background-size: 100%;
+          background-position: bottom;
+          padding: 15px; } }
+    main section#accessories .wrapper #Get-credit-toward-a-new-Mac-section,
+    main section#whatMakeMac .wrapper #Get-credit-toward-a-new-Mac-section {
+      background: url("../img/mac img/trade_in_mac_tile__f5rx9jv08geq_large.jpg") no-repeat, #f2f2f2;
+      background-size: 422px 282px;
+      background-position-x: center;
+      background-position-y: bottom;
+      padding-bottom: 276px; }
+      @media screen and (max-width: 1067px) {
+        main section#accessories .wrapper #Get-credit-toward-a-new-Mac-section,
+        main section#whatMakeMac .wrapper #Get-credit-toward-a-new-Mac-section {
+          background: url("../img/mac img/trade_in_mac_tile__f5rx9jv08geq_medium_2x.jpg") no-repeat, #f2f2f2;
+          background-size: 400px 280px;
+          background-position: bottom; } }
+      @media screen and (max-width: 734px) {
+        main section#accessories .wrapper #Get-credit-toward-a-new-Mac-section,
+        main section#whatMakeMac .wrapper #Get-credit-toward-a-new-Mac-section {
+          background: url("../img/mac img/trade_in_mac_tile__f5rx9jv08geq_small_2x.jpg") no-repeat, #f2f2f2;
+          background-size: 100%;
+          background-position: bottom; } }
+  main #whatMakeMac {
+    margin: 100px 0; }
+    main #whatMakeMac h2 {
+      text-align: center;
+      margin: 20px 0; }
+    main #whatMakeMac .product-sections {
+      background-color: #444; }
+    main #whatMakeMac #Incredible-power-Incredibly-simple-section {
+      background: url("../img/mac img/why_mac__eilvvja113ki_large.jpg") no-repeat, #fafafa;
+      background-size: 422px 282px;
+      background-position-x: center;
+      background-position-y: 80%;
+      padding-bottom: 276px; }
+      @media screen and (max-width: 1067px) {
+        main #whatMakeMac #Incredible-power-Incredibly-simple-section {
+          background: url("../img/mac img/why_mac__eilvvja113ki_medium.jpg") no-repeat, #fafafa;
+          background-size: 299px 189px;
+          background-position: center 65%; }
+          main #whatMakeMac #Incredible-power-Incredibly-simple-section h3 {
+            font-size: 40px; } }
+      @media screen and (max-width: 734px) {
+        main #whatMakeMac #Incredible-power-Incredibly-simple-section {
+          background: url("../img/mac img/why_mac__eilvvja113ki_small_2x.jpg") no-repeat, #fafafa;
+          background-size: 280px 177px;
+          background-position: bottom; }
+          main #whatMakeMac #Incredible-power-Incredibly-simple-section h3 {
+            font-size: 32px; } }
+    main #whatMakeMac #Doing-it-all-in-all-new-ways-section {
+      background: url("../img/mac img/big_sur__vsy5fc1nv5e2_large.jpg") no-repeat, #f2f2f2;
+      background-size: 1380px 600px;
+      background-position-x: center;
+      background-position-y: bottom;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff; }
+      main #whatMakeMac #Doing-it-all-in-all-new-ways-section a {
+        color: #fff; }
+        main #whatMakeMac #Doing-it-all-in-all-new-ways-section a::after {
+          color: #fff;
+          border-color: #fff; }
+      @media screen and (max-width: 1067px) {
+        main #whatMakeMac #Doing-it-all-in-all-new-ways-section {
+          background: url("../img/mac img/big_sur__vsy5fc1nv5e2_medium.jpg") no-repeat, #f2f2f2;
+          background-size: 734px 600px;
+          background-position: bottom; } }
+      @media screen and (max-width: 734px) {
+        main #whatMakeMac #Doing-it-all-in-all-new-ways-section {
+          background: url("../img/mac img/big_sur__vsy5fc1nv5e2_small_2x.jpg") no-repeat, #f2f2f2;
+          background-size: 734px 600px;
+          background-position: bottom; } }
+    main #whatMakeMac #reasons-Mac-means-business-11-section {
+      background: url("../img/mac img/11_reasons__e1mfuklrwzee_large.jpg") no-repeat, #f2f2f2;
+      background-size: 675px 653px;
+      background-position-x: center;
+      background-position-y: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      main #whatMakeMac #reasons-Mac-means-business-11-section .content {
+        text-align: unset; }
+        main #whatMakeMac #reasons-Mac-means-business-11-section .content h3 {
+          font-size: 64px; }
+        main #whatMakeMac #reasons-Mac-means-business-11-section .content a {
+          padding-left: 50px; }
+      @media screen and (max-width: 1067px) {
+        main #whatMakeMac #reasons-Mac-means-business-11-section {
+          background: url("../img/mac img/11_reasons__e1mfuklrwzee_medium.jpg") no-repeat, #f2f2f2;
+          background-size: 600px 600px; }
+          main #whatMakeMac #reasons-Mac-means-business-11-section .content h3 {
+            font-size: 48px; } }
+      @media screen and (max-width: 734px) {
+        main #whatMakeMac #reasons-Mac-means-business-11-section {
+          background: url("../img/mac img/11_reasons__e1mfuklrwzee_small.jpg") no-repeat, #f2f2f2;
+          background-size: 600px 600px;
+          background-position: center center; }
+          main #whatMakeMac #reasons-Mac-means-business-11-section .content h3 {
+            font-size: 40px; }
+          main #whatMakeMac #reasons-Mac-means-business-11-section .content a {
+            padding-left: 25px; } }
+    main #whatMakeMac #All-your-devices-One-seamless-experience-section {
+      background: url("../img/mac img/continuity__wt9898ut9n66_large.jpg") no-repeat, #fafafa;
+      background-size: 675px 303px;
+      background-position-x: center;
+      background-position-y: bottom; }
+      @media screen and (max-width: 1067px) {
+        main #whatMakeMac #All-your-devices-One-seamless-experience-section {
+          background: url("../img/mac img/continuity__wt9898ut9n66_medium_2x.jpg") no-repeat, #fafafa;
+          background-size: 360px 185px;
+          background-position: center 86%; } }
+      @media screen and (max-width: 734px) {
+        main #whatMakeMac #All-your-devices-One-seamless-experience-section {
+          background: url("../img/mac img/continuity__wt9898ut9n66_small_2x.jpg") no-repeat, #fafafa;
+          background-size: 100%;
+          background-position: center bottom; }
+          main #whatMakeMac #All-your-devices-One-seamless-experience-section .content h3 {
+            font-size: 32px; } }
+  main section#Built-in-Apps,
+  main section#Pro-Apps {
+    text-align: center; }
+    main section#Built-in-Apps h2,
+    main section#Pro-Apps h2 {
+      margin: 15px 0; }
+    main section#Built-in-Apps p,
+    main section#Pro-Apps p {
+      padding: 20px;
+      max-width: 700px;
+      margin: 30px auto; }
+    main section#Built-in-Apps ul,
+    main section#Pro-Apps ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      position: relative; }
+      main section#Built-in-Apps ul::before,
+      main section#Pro-Apps ul::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 1px;
+        background-color: #86868b; }
+      main section#Built-in-Apps ul .App-from-bar,
+      main section#Pro-Apps ul .App-from-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2rem; }
+        main section#Built-in-Apps ul .App-from-bar img,
+        main section#Pro-Apps ul .App-from-bar img {
+          width: 48px;
+          height: 50px; }
+    main section#Built-in-Apps .changeFigure,
+    main section#Pro-Apps .changeFigure {
+      position: relative;
+      display: block;
+      height: 514px;
+      padding-bottom: 50px;
+      margin: 30px auto 70px auto; }
+      main section#Built-in-Apps .changeFigure::after,
+      main section#Pro-Apps .changeFigure::after {
+        background: url("../img/mac img/bia_hw__cvab71m52tsi_large.jpg") no-repeat;
+        width: 608px;
+        height: 514px;
+        background-size: 608px 514px;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1; }
+        @media screen and (max-width: 1067px) {
+          main section#Built-in-Apps .changeFigure::after,
+          main section#Pro-Apps .changeFigure::after {
+            background: url("../img/mac img/bia_hw__cvab71m52tsi_medium.jpg") no-repeat;
+            width: 476px;
+            height: 402px;
+            background-size: 476px 402px; } }
+        @media screen and (max-width: 734px) {
+          main section#Built-in-Apps .changeFigure::after,
+          main section#Pro-Apps .changeFigure::after {
+            background: url("../img/mac img/bia_hw__cvab71m52tsi_small.jpg") no-repeat;
+            width: 266px;
+            height: 225px;
+            background-size: 266px 225px; } }
+      main section#Built-in-Apps .changeFigure figure,
+      main section#Pro-Apps .changeFigure figure {
+        background: url("../img/mac img/bia_safari__fiiu4dac0zqm_large.jpg") no-repeat;
+        width: 575px;
+        height: 324px;
+        background-size: 575px 324px;
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        margin-left: -287.5px; }
+        @media screen and (max-width: 1067px) {
+          main section#Built-in-Apps .changeFigure figure,
+          main section#Pro-Apps .changeFigure figure {
+            background: url("../img/mac img/bia_keynote__bml3yzd8dbn6_medium.jpg") no-repeat;
+            left: 50%;
+            margin-left: -225px;
+            top: 13px;
+            width: 450px;
+            height: 254px; } }
+        @media screen and (max-width: 734px) {
+          main section#Built-in-Apps .changeFigure figure,
+          main section#Pro-Apps .changeFigure figure {
+            background: url("../img/mac img/bia_keynote__bml3yzd8dbn6_small.jpg") no-repeat;
+            top: 8px;
+            left: 50%;
+            margin-left: -125.5px;
+            width: 251px;
+            height: 141px; } }
+  main section#Pro-Apps .changeFigure::after {
+    background: url("../img/mac img/gallery_hw__evyh3sqepp2e_large.png") no-repeat;
+    border-bottom: 1px solid #86868b; }
+    @media screen and (max-width: 1067px) {
+      main section#Pro-Apps .changeFigure::after {
+        background: url("../img/mac img/gallery_hw__evyh3sqepp2e_medium.png") no-repeat;
+        width: 540px;
+        height: 315px;
+        background-size: 540px 315px; } }
+    @media screen and (max-width: 734px) {
+      main section#Pro-Apps .changeFigure::after {
+        background: url("../img/mac img/gallery_hw__evyh3sqepp2e_small.png") no-repeat;
+        width: 307px;
+        height: 179px;
+        background-size: 307px 179px; } }
+  main section#Pro-Apps .changeFigure figure {
+    background: url("../img/mac img/pro_logicpro__dl9b0oofbg02_large.jpg") no-repeat;
+    left: 50%;
+    margin-left: -230.5px; }
+    @media screen and (max-width: 1067px) {
+      main section#Pro-Apps .changeFigure figure {
+        background: url("../img/mac img/pro_logicpro__dl9b0oofbg02_medium.jpg") no-repeat;
+        left: 50%;
+        margin-left: -207.5px;
+        top: 13px;
+        width: 415px;
+        height: 260px; } }
+    @media screen and (max-width: 734px) {
+      main section#Pro-Apps .changeFigure figure {
+        background: url("../img/mac img/pro_logicpro__dl9b0oofbg02_small.jpg") no-repeat;
+        top: 8px;
+        left: 50%;
+        margin-left: -117.5px;
+        width: 235px;
+        height: 147px; } }
+  main section#appStore .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto; }
+    main section#appStore .container figure {
+      background: url("../img/mac img/icon_appstore__f9kpspokaru6_large.png") no-repeat;
+      width: 71px;
+      height: 71px;
+      background-size: 71px 71px; }
+    main section#appStore .container .content {
+      padding: 20px; }
+  main section#products .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px; }
+    @media screen and (max-width: 734px) {
+      main section#products .wrapper {
+        grid-template-columns: 1fr; } }
+    main section#products .wrapper .product-sections {
+      position: relative;
+      margin: 7px 0;
+      height: 600px; }
+      main section#products .wrapper .product-sections .content {
+        padding-top: 47px;
+        max-width: 400px;
+        margin: auto;
+        text-align: center; }
+        main section#products .wrapper .product-sections .content p:first-of-type {
+          font-size: 21px; }
+        main section#products .wrapper .product-sections .content p,
+        main section#products .wrapper .product-sections .content .links {
+          margin-top: 10px; }
+        main section#products .wrapper .product-sections .content .links {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+          flex-wrap: wrap; }
+      main section#products .wrapper .product-sections figure {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../img/main img/iphone_12_updated__jepm2xpxncuy_largetall.jpg") center bottom/cover; }
+    main section#products .wrapper #Tv-section {
+      background-color: #000;
+      max-width: 100%; }
+      main section#products .wrapper #Tv-section .content {
+        color: #fff; }
+      main section#products .wrapper #Tv-section .boxFigure {
+        width: 100%;
+        height: 354px;
+        position: relative;
+        margin-top: 49px; }
+        @media screen and (max-width: 734px) {
+          main section#products .wrapper #Tv-section .boxFigure {
+            margin-top: 62px; } }
+      main section#products .wrapper #Tv-section figure {
+        background: url("../img/mac img/apple_tv_plus_half_tile__e74rl1eybamq_large.jpg") no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0; }
+        @media screen and (max-width: 734px) {
+          main section#products .wrapper #Tv-section figure {
+            background: url("../img/mac img/apple_tv_plus_half_tile__e74rl1eybamq_small.jpg") no-repeat;
+            background-position-y: bottom; } }
+    main section#products .wrapper #Pay-section {
+      min-width: 100%;
+      background-color: #fafafa; }
+      main section#products .wrapper #Pay-section .boxFigure {
+        width: 100%;
+        height: 354px;
+        position: relative;
+        margin-top: 49px; }
+        @media screen and (max-width: 734px) {
+          main section#products .wrapper #Pay-section .boxFigure {
+            margin-top: 62px; } }
+      main section#products .wrapper #Pay-section figure {
+        background: url("../img/mac img/apple_pay__bo0060x89piu_large.jpg") no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position-x: center; }
+        @media screen and (max-width: 734px) {
+          main section#products .wrapper #Pay-section figure {
+            background: url("../img/mac img/apple_pay__bo0060x89piu_small.jpg") no-repeat;
+            width: 305px;
+            height: 181px;
+            background-position: center center;
+            background-size: 305px 181px;
+            left: 50%;
+            margin-left: -152.5px; } }
+    main section#products .wrapper #Arcade-section {
+      max-width: 100%; }
+      main section#products .wrapper #Arcade-section .boxFigure {
+        width: 100%;
+        height: 354px;
+        position: relative;
+        margin-top: 49px; }
+        @media screen and (max-width: 734px) {
+          main section#products .wrapper #Arcade-section .boxFigure {
+            margin-top: 62px; } }
+      main section#products .wrapper #Arcade-section figure {
+        background: url("../img/mac img/apple_arcade__cxemfxlq682u_large.jpg") no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0; }
+        @media screen and (max-width: 734px) {
+          main section#products .wrapper #Arcade-section figure {
+            background: url("../img/mac img/apple_arcade__cxemfxlq682u_small.jpg") no-repeat;
+            background-position-x: center; } }
+    main section#products .wrapper #News-section {
+      color: #fff;
+      max-width: 100%;
+      background-color: #fa3454; }
+      main section#products .wrapper #News-section .boxFigure {
+        width: 100%;
+        height: 354px;
+        position: relative;
+        margin-top: 49px;
+        z-index: 1; }
+        @media screen and (max-width: 734px) {
+          main section#products .wrapper #News-section .boxFigure {
+            margin-top: 62px; } }
+      main section#products .wrapper #News-section figure {
+        background: url("../img/mac img/apple_news_plus_half_tile__f4aypj0g0aq2_large.jpg") no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position-y: bottom;
+        background-position-x: center; }
+        @media screen and (max-width: 734px) {
+          main section#products .wrapper #News-section figure {
+            background: url("../img/mac img/apple_news_plus_half_tile__f4aypj0g0aq2_small.jpg") no-repeat;
+            background-position-y: bottom;
+            background-position-x: center; } }
+
+/*# sourceMappingURL=style.css.map */

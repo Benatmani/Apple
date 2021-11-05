@@ -1,0 +1,122 @@
+extends ../main-page/index.pug
+include ../pug/mixins
+block head
+    title Mac
+block main-content
+        section#products-bar
+            .container
+                +products-bar("../img/mac\ img/macbookair_light__fj8r9488gr6u_large.svg","../img/mac\ img/macbook_pro_13_light__erjvypflcis2_large.svg","../img/mac\ img/macbook_pro_16_light__cialfoihbk02_large.svg","../img/mac\ img/imac_24__e0tdvilut5qq_large%20(1).svg","../img/mac\ img/imac_27_light__gbkfmaud0qaa_large.svg","../img/mac\ img/mac_pro_light__dq2h14cvit6q_large.svg","../img/mac\ img/mac_mini_light__chxdj29efvrm_large%20(1).svg","../img/mac\ img/mac_compare__cixm3zhf3k76_large.svg","../img/mac\ img/mac_pro_display_light__ditp43qhvlm6_large.svg","../img/mac\ img/mac_accessories_light__bow96z0024qa_large.svg","../img/mac\ img/mac_os.svg","MacBook Air","MacBook Pro 13","MacBook Pro 16","iMac 24","iMac 27","Mac Pro","Mac Mini","Compare","Pro Display XDR","Accessories","Big Sur")  
+        +welcoming("Save on Mac for college with education pricing. And get AirPods.◊ ","Shop Now","darker")        
+        section#newiMac
+            .container
+                .content
+                    span New
+                    h2 iMac
+                    p Say Hello.
+                    span From 1299$
+                    a(href = "#" class="primary-btn-dark") Buy
+                    a(href = "#" class="darker-link-big") Learn More
+                figure    
+        section#compare-models
+            h2 Which Mac is right for you?
+            a(href = "#" class="darker-link-big") Compare all Mac models
+            .container
+                .MacBook-version
+                    +models-products("MacBook Air","From $999")
+                    -var macBookModels1 = [["13.3","Retina display",""],["","Apple M1 Chip",""],["","Up to 16GB unified memory","For increased performance and power efficiency"],["2TB","Maximum configurable storage2",""],["","Up to 18 hours battery life3",""],["","720p FaceTime HD camera","With the image signal processor of M1 for drastically improved performance"],["2.8 lb.","Weight",""],["","Touch ID",""]]
+                    -for (let i = 0 ; i< macBookModels1.length ; i++)
+                        +models-specification(macBookModels1[i])
+                    a(href = "#" class="darker-link") Learn More    
+                .MacBook-version
+                    +models-products("MacBook Pro 13","From $1299")
+                    -var macBookModels2 = [["13.3","Retina display",""],["","Apple M1 Chip","Also available with Intel Core i5 or i7 processor"],["","Up to 16GB unified memory","For increased performance and power efficiency"],["2TB","Maximum configurable storage2",""],["","Up to 20 hours battery life3",""],["","720p FaceTime HD camera","With the image signal processor of M1 for drastically improved performance"],["3 lb.","Weight",""],["","Touch Bar and Touch ID",""]]
+                    -for (let i = 0 ; i< macBookModels2.length ; i++)
+                        +models-specification(macBookModels2[i])
+                    a(href = "#" class="darker-link") Learn More    
+                .MacBook-version
+                    +models-products("MacBook Pro 16","From $2399")
+                    -var macBookModels3 = [["16","Retina display",""],["","Up to Intel Core i9 processor",""],["","Up to 64GB memory",""],["8TB","Maximum configurable storage2",""],["","Up to 11 hours battery life3",""],["","720p FaceTime HD camera",""],["4.3 lb.","Weight",""],["","Touch Bar and Touch ID",""]]
+                    -for (let i = 0 ; i< macBookModels3.length ; i++)
+                        +models-specification(macBookModels3[i])
+                    a(href = "#" class="darker-link") Learn More
+        section#accessories
+            .wrapper
+                +whatMakeMac("Accessories","Explore Mac accessories.",undefined,"darker","Shop")            
+                +whatMakeMac("Apple Trade In","Get credit toward a new Mac.","Just trade in your eligible computer for credit or recycle it for free. It’s good for you and the planet.9","darker","Find your trade‑in value")            
+        section#education-pricing
+            .container
+                figure
+                .content
+                    h3 Buy a Mac for college. Get AirPods.◊    
+                    a(href = "#" class="darker-link") Save with education pricing
+        section#cash-back
+            .container
+                .content
+                    h3 Get 3% Daily Cash back with Apple Card.            
+                    p And pay for your new Mac over 12 months, interest‑free when you choose to check out with Apple Card Monthly Installments.†
+                    a(href = "#" class="darker-link") Learn More
+                figure    
+        section#macOS
+            .container
+                .content
+                    h5 macOS Monterey
+                    h3 High powered meets "Hi everyone".           
+                    a(href = "#" class="darker-link") See the preview
+                figure.figure 
+        section#offers
+            .boxes
+                +offers("local_shipping","Free delivery","And free returns. See checkout for delivery dates","Learn More")
+                +offers("monetization_on","Get 3% Daily Cash back with Apple Card","And pay over time, interest‑free when you choose to check out with Apple Card Monthly Installments.†","Learn More")
+                +offers("wechat","Get help buying","Have a question? Call a Specialist or chat online. Call 1‑800-MY‑APPLE.","Contact US")
+        section#whatMakeMac
+            h2 What makes a Mac a Mac?
+            .wrapper
+                +whatMakeMac("Why Mac","Incredible power. Incredibly simple.",undefined,"darker","learn more") 
+                +whatMakeMac("macOS Big Sur","Doing it all in all new ways.",undefined,"darker","Learn more") 
+                +whatMakeMac("","reasons Mac means business 11.","Game-changing performance, simple IT, and excellent value, just to name a few.","darker","See all 11 reasons") 
+                +whatMakeMac("Continuity","All your devices. One seamless experience.",undefined,"darker","learn more") 
+        section#Built-in-Apps        
+                h2 Built-in Apps
+                p Powerful creativity and productivity tools live inside every Mac — apps that help you explore, connect, and work more efficiently.
+                +App-bar("../img/mac\ img/nav_icon_safari__g20e4xjgcxme_large.jpg","../img/mac\ img/nav_icon_photos__d81k6es8jvau_large.jpg","../img/mac\ img/nav_icon_imovie__enh5zqh9p6mq_large.jpg","../img/mac\ img/nav_icon_garageband__c0fmttdfhi6a_large.jpg","../img/mac\ img/nav_icon_pages__e2fzc7v3smye_large.jpg","../img/mac\ img/nav_icon_numbers__bm4bw9tf055y_large.jpg","../img/mac\ img/nav_icon_keynote__crxuc5g7gzo2_large.jpg","Safari","Photos","iMovie","GarageBand","Pages","Numbers","Keynote")
+                p Create sophisticated spreadsheets with dramatic interactive charts, tables, and images that paint a revealing picture of your data. Work seamlessly between Mac, iOS, and iPadOS devices. And work effortlessly with people who use Microsoft Excel.
+                a(href = "#" class="darker-link") Learn more about Numbers
+                .changeFigure
+                    figure
+        section#Pro-Apps       
+                h2 Pro Apps
+                p For professionals ready to push their creativity, these industry-leading apps offer maximum control over editing, processing, and output of music and film.
+                +App-bar("../img/mac\ img/nav_icon_logicpro__d3j2w5izcdyu_large.jpg","../img/mac\ img/nav_icon_mainstage__b3ll985e4cj6_large.jpg","../img/mac\ img/nav_icon_finalcut__ghgrp93p0hiu_large.jpg","../img/mac\ img/nav_icon_motion__zyzm9f0yu82a_large.jpg","../img/mac\ img/nav_icon_compressor__cjka2d49sj2a_large.jpg","Logic Pro","MainStage","Final Cut Pro","Motion","Compressor")
+                p Logic Pro puts a complete recording and MIDI production studio on your Mac, with everything you need to write, record, edit, and mix like never before. And with a huge collection of full-featured plug-ins along with thousands of sounds and loops, you’ll have everything you need to go from first inspiration to final master, no matter what kind of music you want to create.
+                a(href = "#" class="darker-link") Learn more about Logic Pro
+                .changeFigure
+                    figure
+        section#appStore
+            .container
+                figure
+                .content
+                    p The Mac App Store features rich editorial content and great apps for Mac. #[a(href="#" class="darker-link") Explore the Mac App Store] 
+        section#moreMac
+            h2 Get more out of Mac
+            .container
+                .content
+                    h5 Today at Apple
+                    h3 Virtual Sessions
+                    p Learn the basics of using Mac live with Apple Creatives.           
+                    a(href = "#" class="darker-link-big") Sign up
+                figure.figure             
+        section#One
+            .container
+                figure.figure             
+                .content
+                    h2 #[i(class="fab fa-apple")] One
+                    p Bundle up to six Apple services. And enjoy more for less.
+                    .links
+                        a(href = "#" class="darker-link-big") Try it free
+                        a(href = "#" class="darker-link-big") Learn more
+        section#products
+            .wrapper  
+                +product("darker","Tv","Get 3 months of Apple TV+ free when you buy a Mac.","Try it free","Learn more")          
+                +product("lighter","Pay","The safer way to make secure, contactless purchases in stores and online.","Learn More")          
+                +product("darker","Arcade","Get 3 months of Apple Arcade free when you buy a Mac.","Try it free","Learn more")
+                +product("darker","News","Hundreds of magazines and leading newspapers. One subscription.","Try it free","Learn more")          

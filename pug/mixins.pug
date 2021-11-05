@@ -1,0 +1,91 @@
+//- Abdou Mixins
+mixin product(linkColor,title,paragraph,...links)
+    if(title !== undefined)
+        -let sectionId = title.split(" ").map(item=> item.endsWith(".") ? item.slice(0,item.length - 1) : item).join("-") + "-section";
+        section(id=`${sectionId}` class="product-sections")
+            a(href="#" class="click-section")
+            .content
+                h3= title 
+                if(paragraph !== undefined)
+                    p=paragraph
+                .links 
+                    a(href="#" class=`${linkColor}-link`)= links[0] 
+                    if(links[1] !== undefined) 
+                        a(href="#" class=`${linkColor}-link`)= links[1]
+            .boxFigure
+                figure      
+    else
+        section(id="without-title" class="product-sections")
+            a(href="#" class="click-section")
+            .content
+                a(href = "#") Stream the new episodes  
+            figure
+mixin whatMakeMac(subtitle,title,paragraph,linkColor,link)
+    -let sectionId = title.split(" ").map(item=> item.endsWith(".") ? item.slice(0,item.length - 1) : item).join("-") + "-section";
+        section(id=`${sectionId}` class="product-sections")
+            a(href="#" class="click-section")
+            .content
+                h2= subtitle
+                h3= title
+                if(paragraph !== undefined)
+                    p=paragraph
+                .links 
+                    a(href="#" class=`${linkColor}-link`)= link
+
+mixin products-bar(...infos)
+                    -let images = infos.filter(i => i.endsWith(".svg"))
+                    -let paragraphs = infos.filter(i => !i.endsWith(".svg"))
+                    -let length = images.lenght;
+                    ul
+                        each image,index in images
+                            li.product-from-bar
+                                a(href="#" class="click-section")
+                                img(src= image alt="My Happy SVG")
+                                span= paragraphs[index]
+mixin App-bar(...infos)
+                    -let images = infos.filter(i => i.endsWith(".jpg"))
+                    -let paragraphs = infos.filter(i => !i.endsWith(".jpg"))
+                    -let length = images.lenght;
+                    ul
+                        each image,index in images
+                            li.App-from-bar
+                                a(href="#" class="click-section")
+                                img(src= image alt="Built-in Apps")
+                                span= paragraphs[index]
+
+mixin welcoming(paragraph,link,color)
+            section(class=`welcoming-${color}`)
+                p=paragraph 
+                    a(href="#" class=`${color}-link`)= link
+
+
+mixin models-products(nameProduct,pricing)
+    .box-product
+        figure.device
+            a(href="#" class="click-section")
+        .content
+            h3= nameProduct
+            span= pricing
+            figure.colors
+            a(href = "#" class="primary-btn-dark-small") Buy
+mixin models-specification(arr)
+    .specification
+        if(arr.length ===0)
+            h1= "-"
+        else 
+            if(arr[0] === "")
+                figure
+            else 
+                h4= arr[0]
+            p= arr[1]
+            if(description !=="")
+                p= arr[2]       
+
+mixin offers(icon,title,paragraph,link)
+    .box
+        span(class="material-icons-outlined")= icon
+        h2= title
+        p= paragraph
+        a(href = "#" class="darker-link")=link
+
+//- Sidahmed Mixins                    
